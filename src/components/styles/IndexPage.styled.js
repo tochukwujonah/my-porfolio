@@ -11,7 +11,7 @@ export const Container = styled.section`
 
 export const PorfolioBody = styled.section`
     margin-left: 20%;
-    padding: 2rem 4rem;
+    padding: 0rem 4rem;
     width: 80%;
 `
 

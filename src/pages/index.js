@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { Outlet, useParams } from 'react-router-dom'
+import { Outlet, useParams, useLocation } from 'react-router-dom'
 import { Header } from '../components/Header'
 import { SideNav } from '../components/SideNav'
+import { Footer } from '../components/Footer'
 import { 
     Container,
     PorfolioBody,
@@ -16,10 +17,8 @@ const Index = () => {
 
     const [dropMenuIsVisible, setDropMenuIsVisible] = useState(false);
 
-    const showSidebar = () =>{
-    setDropMenuIsVisible( <SideNav /> )
-  }
-  const params = useParams();
+    const route = window.location.href;
+
 
 
   return (
@@ -30,12 +29,24 @@ const Index = () => {
 
         <PorfolioBody>
             <PorfolioHeader>
-            { params.sub ? null : <Header /> }
+            { 
+            route.includes("about-me")
+                ? <Header header={'<Get to know me/>'} />
+                    : route.includes("contact-me")
+                        ? <Header header={'<Let`s talk/>'} />
+                            : route.includes("my-github")
+                                ? <Header header={'<The Codebase/>'} />
+                                    : route.includes("my-projects")
+                                        ? <Header header={'<Building Amazing Project/>'} />
+                                            : null
+
+        }
             </PorfolioHeader>
 
             <MainContent>
                 <Outlet />
             </MainContent>
+            <Footer/>
         </PorfolioBody>
         
         
