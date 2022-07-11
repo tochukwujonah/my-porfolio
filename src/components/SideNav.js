@@ -58,8 +58,9 @@ const changeActiveTab = (idx, text) => {
             <div key={idx} onClick={() => changeActiveTab(idx, text)}>
               <li> 
                 <img src={TabIcon} alt="" />
-                {text}
-                {active && <img src={TabIconActive} alt="" />}
+                <h5>{text}</h5>
+                <span>{active && <img src={TabIconActive} alt="" />}</span>
+                
                 {/* <img src={ActiveArrow} alt="" /> */}
               </li>
 
@@ -84,8 +85,9 @@ const Container = styled.aside`
 const Logo = styled.div`
   display: flex;
   padding-left: 48px;
+  padding-bottom: 20px;
   height: fit-content;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
   & > h3 {
     font-family: 'Space Grotesk', sans-serif;
@@ -105,17 +107,39 @@ const Logo = styled.div`
   }
 `
 const NavLinks = styled.div`
+  position: absolute;
   
   & > div {
     cursor: pointer;
+    margin-top: 30px;
     padding-left: 48px;
+
+
+    :active{
+      background: linear-gradient(270deg, rgba(37, 35, 61, 0) 0%, #25233D 100%);
+    }
+    /* border: 1px solid red; */
 
     & > li {
       display: flex;
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.6rem;
-      font-weight: 500;
+      align-items: center;
+      padding: 8px 0;
       list-style: none;
+      /* border: 1px solid red; */
+
+      & > h5{
+        padding-left: 24px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+      }
+
+      & > span{
+        align-self: flex-end;
+        padding-left: 70px;
+        position: absolute;
+        left: 100%;
+        
+      }
     }
   }
 `

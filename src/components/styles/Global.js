@@ -55,6 +55,7 @@ h3 {
 
 h4 {
   font-size: 1.8rem;
+  font-weight: 400;
 }
 
 h5 {
