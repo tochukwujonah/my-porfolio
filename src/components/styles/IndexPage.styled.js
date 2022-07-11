@@ -7,20 +7,26 @@ export const Container = styled.section`
     display: flex;
     justify-content: space-between;
     z-index: 1000000000000000;
-`
+
+    & > div{
+        width: 20%;
+        border: 2px solid red;
+    }
+`;
 
 export const PorfolioBody = styled.section`
-    margin-left: 20%;
-    padding: 0rem 4rem;
-    width: 80%;
-`
+    /* margin-left: 20%; */
+    padding: 0rem 2rem;
+    width: 78%;
+    border: 2px solid red;
+`;
 
 export const PorfolioHeader = styled.section`
     width: 100%;
-`
+`;
 
 export const MainContent = styled.section`
     width: 100%;
     height: max-content;
-`
+`;
 

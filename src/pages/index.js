@@ -17,6 +17,8 @@ const Index = () => {
 
     const [dropMenuIsVisible, setDropMenuIsVisible] = useState(false);
 
+    const params = useParams();
+
     const route = window.location.href;
 
 
@@ -30,6 +32,7 @@ const Index = () => {
         <PorfolioBody>
             <PorfolioHeader>
             { 
+            // params.route === 'about-me' 
             route.includes("about-me")
                 ? <Header header={'<Get to know me/>'} />
                     : route.includes("contact-me")

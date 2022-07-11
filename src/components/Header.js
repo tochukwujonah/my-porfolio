@@ -17,7 +17,6 @@ const Container = styled.section`
   background-position: center;
   height: 100%;
   
-  
 
   & > h1{
     /* font-family: 'Space Grotesk', sans-serif; */
