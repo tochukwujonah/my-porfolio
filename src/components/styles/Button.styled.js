@@ -3,7 +3,7 @@ import { colors } from "../../colors";
 
 export const ButtonWrapper = styled.button`
   border-radius: 0px;
-  padding: 20px 40px;
+  padding: 15px 30px;
   background-color: ${({ filled, bgColor }) =>
     !filled && !bgColor
       ? "transparent"

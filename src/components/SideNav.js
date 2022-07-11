@@ -137,7 +137,7 @@ const NavLinks = styled.div`
         align-self: flex-end;
         padding-left: 70px;
         position: absolute;
-        left: 100%;
+        left: 90%;
         
       }
     }

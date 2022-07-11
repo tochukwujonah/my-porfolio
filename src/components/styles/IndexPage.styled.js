@@ -9,7 +9,7 @@ export const Container = styled.section`
     z-index: 1000000000000000;
 
     & > div{
-        width: 20%;
+        width: 19%;
         border: 2px solid red;
     }
 `;
@@ -17,7 +17,7 @@ export const Container = styled.section`
 export const PorfolioBody = styled.section`
     /* margin-left: 20%; */
     padding: 0rem 2rem 0rem 0rem;
-    width: 79%;
+    width: 80%;
     border: 2px solid red;
 `;
 
