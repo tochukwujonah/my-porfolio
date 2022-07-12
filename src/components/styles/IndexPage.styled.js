@@ -22,11 +22,14 @@ export const PorfolioBody = styled.section`
 `;
 
 export const PorfolioHeader = styled.section`
-    width: 100%;
+    /* width: 100%; */
+    width: 1130px;
+    max-width: 100%;
 `;
 
 export const MainContent = styled.section`
-    width: 100%;
+    width: 1130px;
+    max-width: 100%;
     height: max-content;
 `;
 

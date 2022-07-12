@@ -11,6 +11,8 @@ const Footer = () => {
 
 const Container =  styled.section`
     text-align: center;
+    width: 1130px;
+    max-width: 100%;
 `
 
 export {Footer}
