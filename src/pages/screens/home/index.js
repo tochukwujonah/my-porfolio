@@ -40,10 +40,10 @@ const Home = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio consectetur vel arcu non, tempor diam rhoncus. Quam posuere eros, eu dolor diam. <a href="/about-me">Read More</a>
             
           </p>
-          <div>
+          <WorkExperience>
             <h3>Work Experience</h3>
             <InternComponent />
-          </div>
+          </WorkExperience>
           
         </AboutBox>
         
@@ -57,6 +57,21 @@ const Home = () => {
             <h6>Styled components</h6>
             <h6>Chakra UI</h6>
           </SingledOutSkills>
+
+          <RecentProject>
+            <RecentHeader>
+              <h3>Most recent project</h3>
+            </RecentHeader>
+            <RecentBox>
+              <div>
+                <h6>Defi Pronto</h6>
+              </div>
+              <small>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit lacus, lacus, commodo libero.
+              </small>
+              
+            </RecentBox>
+          </RecentProject>
         </SkillBox>
       </HomeDetails>
     </Container>
@@ -65,6 +80,8 @@ const Home = () => {
 
 const Container = styled.section`
   overflow-x: hidden;
+  width: 1130px;
+  max-width: 100%;
   
 `;
 const HomeHeader = styled.div`
@@ -73,9 +90,9 @@ const HomeHeader = styled.div`
 
 const ImgContainer = styled.div`
 
-  & > img{
-    /* height: 100px; */
-    object-fit: contain;
+  & img{
+    width: 100%;
+    object-fit: cover;
   }
 `;
 
@@ -118,10 +135,6 @@ const HomeDetails = styled.section`
 const AboutBox = styled.div`
   flex: 2.2;
 
-  & > :last-child{
-    /* margin-top: 10px; */
-  }
-
   & p{
     font-size: 1.4rem;
     line-height: 22.652px;
@@ -130,12 +143,14 @@ const AboutBox = styled.div`
     color: ${colors.btn_links} !important;
     text-decoration: none;
   }
-  
   }
 
-  
-
 `;
+
+const WorkExperience = styled.div`
+  margin-top: 20px;
+`
+
 const SkillBox = styled.div`
   flex: 1;
   padding-left: 30px;
@@ -156,5 +171,27 @@ const SingledOutSkills = styled.div`
     color: ${colors.tag_color};
   }
   `;
+
+const RecentProject = styled.aside`
+  margin-top: 20px;
+`;
+
+const RecentHeader = styled.div`
+  display: flex;
+`
+
+const RecentBox = styled.div`
+  background-color: ${colors.box_bg};
+  padding: 20px;
+
+  & > div{
+    display: flex;
+
+  }
+
+  & small{
+    font-size: 12px;
+  }
+`
 
 export {Home};

@@ -20,7 +20,7 @@ const Container = styled.section`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 37%;
+    width: 265px;
     align-items: flex-start;
 
     & > div{

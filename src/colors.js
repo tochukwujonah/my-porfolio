@@ -4,6 +4,7 @@ export const colors = {
     body_text: "#C8C8C8",
     nav_links: "#BCD0DC",
     btn_links: "#03DAC6",
+    box_bg: "#0A1114",
     tag_color: "#6694AD",
     tag_bg: "#0E161B",
     experience_color: "#BDC2D4",
