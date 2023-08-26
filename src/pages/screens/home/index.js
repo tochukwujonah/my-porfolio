@@ -1,8 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components';
+import Slider from "react-slick";
+
+
 import { Button } from '../../../components/Button';
 import { InternComponent } from '../../../components/InternComponent';
+
+import { RecentProjects } from '../../../components/RecentProjects';
+import { ProjectsData } from '../../../data/projects.data';
+
+import { AiOutlineLink } from 'react-icons/ai'
 
 import {
   HomeBg,
@@ -13,6 +21,14 @@ import { colors } from '../../../colors';
 
 
 const Home = () => {
+
+    var settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 2,
+      slidesToScroll: 2
+    };
   return (
     <Container>
       <HomeHeader>
@@ -54,23 +70,38 @@ const Home = () => {
             <h6>HTML, CSS & CSS modules</h6>
             <h6>Javascript</h6>
             <h6>React & Next JS</h6>
+            <h6>Typescript</h6>
+            <h6>TailwindCSS</h6>
+            <h6>Redux</h6>
             <h6>Styled components</h6>
+            <h6>WordPress</h6>
+            <h6>Wix</h6>
             <h6>Chakra UI</h6>
           </SingledOutSkills>
+
+          
 
           <RecentProject>
             <RecentHeader>
               <h3>Most recent project</h3>
+
+              <NavLink to="/my-projects">See all projects</NavLink>
             </RecentHeader>
-            <RecentBox>
-              <div>
-                <h6>Defi Pronto</h6>
-              </div>
-              <small>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit lacus, lacus, commodo libero.
-              </small>
-              
-            </RecentBox>
+
+            
+
+              {
+                ProjectsData?.slice(0, 1).map((projects) => {
+                  return (
+                    // <Slider {...settings}>
+                      <RecentProjects projectdata={projects} />
+                    // </Slider>
+                  )
+                })
+              }
+
+            
+            
           </RecentProject>
         </SkillBox>
       </HomeDetails>
@@ -80,7 +111,7 @@ const Home = () => {
 
 const Container = styled.section`
   overflow-x: hidden;
-  width: 1130px;
+  width: 100%;
   max-width: 100%;
   
 `;
@@ -95,6 +126,11 @@ const ImgContainer = styled.div`
     object-fit: cover;
   }
 `;
+
+const NavLink = styled(Link)`
+    font-size: 16px;
+    color: ${colors.btn_links};
+`
 
 const SubHeader = styled.div`
   width: 100%;
@@ -133,7 +169,8 @@ const HomeDetails = styled.section`
 `;
 
 const AboutBox = styled.div`
-  flex: 2.2;
+  flex: 2;
+  width: 70%;
 
   & p{
     font-size: 1.4rem;
@@ -152,7 +189,7 @@ const WorkExperience = styled.div`
 `
 
 const SkillBox = styled.div`
-  flex: 1;
+  flex: 1.1;
   padding-left: 30px;
 `;
 
@@ -178,6 +215,17 @@ const RecentProject = styled.aside`
 
 const RecentHeader = styled.div`
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & > h3{
+    font-size: 20px;
+  }
+
+  & > p{
+    font-size: 16px;
+    color: ${colors.btn_links};
+  }
 `
 
 const RecentBox = styled.div`
@@ -186,6 +234,8 @@ const RecentBox = styled.div`
 
   & > div{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 
   }
 

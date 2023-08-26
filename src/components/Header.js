@@ -12,7 +12,7 @@ const Header = ({header}) => {
 
 const Container = styled.section`
   background:url(${OtherHeaderBg});
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;

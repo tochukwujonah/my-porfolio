@@ -14,7 +14,7 @@ const AboutMe = () => {
 };
 
 const Container = styled.section`
-  width: 1130px;
+  width: 100%;
   max-width: 100%;
 `
 

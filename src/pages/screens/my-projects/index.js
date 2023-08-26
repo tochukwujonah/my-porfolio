@@ -1,9 +1,16 @@
 import React from 'react'
+import styled from 'styled-components';
 
 const MyProjects = () => {
   return (
-    <div>MyProjects</div>
+    <Container>
+      MyProjects
+    </Container>
   )
 };
+
+const Container =  styled.section`
+
+`
 
 export {MyProjects}
