@@ -17,7 +17,7 @@ export const Container = styled.section`
 export const PorfolioBody = styled.section`
     /* margin-left: 20%; */
     padding: 0rem 2rem 0rem 0rem;
-    width: 100%;
+    width: 80%;
     /* border: 2px solid red; */
 `;
 

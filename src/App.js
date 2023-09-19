@@ -1,3 +1,4 @@
+import React from 'react';
 import {AppRouter} from './approuter'
 import {GlobalStyles} from './components/styles/Global'
 

@@ -91,10 +91,10 @@ const Home = () => {
             
 
               {
-                ProjectsData?.slice(0, 1).map((projects) => {
+                ProjectsData.slice(0, 1).map((projects) => {
                   return (
                     // <Slider {...settings}>
-                      <RecentProjects projectdata={projects} />
+                      <RecentProjects projectdata={projects} key={projects.projectTitle} />
                     // </Slider>
                   )
                 })
